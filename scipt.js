@@ -34,7 +34,7 @@ function getAIResponse(input) {
      if (input.includes("name")) {
         return "I'm a simple AI assistant here to help you!";
     } else if (input.includes("creator")) {
-        return "My Creator is Uriel Morales, Nathanael Cac, and Hans Mackey";
+        return "My Creator are Uriel Morales, Nathanael Cac, and Hans Mackey";
     } else if (input.includes("weather")) {
         return "I can't provide live weather updates, but it's always good to check online!";
     } else if (input.includes("time")) {
