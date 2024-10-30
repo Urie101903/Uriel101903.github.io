@@ -97,7 +97,7 @@ function getAIResponse(input) {
         return "Tesda or College courses?"
     } else if (input.includes("located") || input.includes("address")) {
         return "Tesda or College courses?"
-    } else if (input.includes("admission requirements")) {
+    } else if (input.includes("admission requirements")|| input.includes("requirements")) {
         return `
             <strong>Admission Requirements for New Students:</strong><br><br>
             - Report Card (Form 138)<br>
@@ -113,7 +113,7 @@ function getAIResponse(input) {
             - 2x2 Picture with white background (2 copies)<br>
             - Long Brown Envelope
         `;
-    }  else if (input.includes("admission process")) {
+    }  else if (input.includes("admission process")|| input.includes("process")) {
         return `
             <strong>Admission Process:</strong><br><br>
             Enrollment Schedule: Monday to Friday, 8:00 AM - 5:00 PM<br><br>
