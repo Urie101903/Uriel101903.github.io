@@ -31,6 +31,8 @@ function getAIResponse(input) {
     input = input.toLowerCase();
 
     // General responses based on user input
+    if (input.includes("creator")) {
+        return "My Creator is Uriel Morales, Nathanael Cac, and Hans Mackey";
     if (input.includes("name")) {
         return "I'm a simple AI assistant here to help you!";
     } else if (input.includes("weather")) {
