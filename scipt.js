@@ -25,6 +25,10 @@ function sendMessage() {
         chatbox.scrollTop = chatbox.scrollHeight;
     }, 1000);
 }
+function populateQuestion(question) {
+    document.getElementById("userInput").value = question;
+    sendMessage();
+}
 
 function getAIResponse(input) {
     // Convert input to lowercase
