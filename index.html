@@ -13,7 +13,15 @@
         </div>
         <div id="chatbox">
             <div class="bot-message">Hello! I'm your AI assistant. Ask me anything!</div>
-        </div>
+        </div> 
+        
+                    <div class="suggestions">
+                        <button onclick="populateQuestion('What are the college programs available?')">College Programs</button>
+                        <button onclick="populateQuestion('What are the admission requirements?')">Admission Requirements</button>
+                        <button onclick="populateQuestion('Where is the school located?')">School Location</button>
+                        <button onclick="populateQuestion('Can you tell me about TESDA courses?')">TESDA Courses</button>
+                    </div>
+        
         <div class="input-container">
             <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
             <button id="send" onclick="sendMessage()">
