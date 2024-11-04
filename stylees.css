@@ -62,6 +62,30 @@ body {
     border-bottom-right-radius: 10px;
 }
 
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: f4f4f4;
+    justify-content: center;
+}
+
+.suggestions button {
+    background-color: #00a550;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.suggestions button:hover {
+    background-color: #008f45;
+}
+
 #userInput {
     flex-grow: 1;
     padding: 10px;
