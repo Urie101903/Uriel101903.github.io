@@ -1,75 +1,45 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2c3e50;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+let userScore = 0;
+let compScore = 0;
+
+const userScoreSpan = document.getElementById("user-score");
+const compScoreSpan = document.getElementById("comp-score");
+const message = document.getElementById("message");
+
+function playGame(userChoice) {
+    const choices = ['rock', 'paper', 'scissors'];
+    const compChoice = choices[Math.floor(Math.random() * 3)];
+    
+    switch (userChoice + compChoice) {
+        case "rockscissors":
+        case "paperrock":
+        case "scissorspaper":
+            win(userChoice, compChoice);
+            break;
+        case "rockpaper":
+        case "paperscissors":
+        case "scissorsrock":
+            lose(userChoice, compChoice);
+            break;
+        case "rockrock":
+        case "paperpaper":
+        case "scissorsscissors":
+            draw(userChoice, compChoice);
+            break;
+    }
 }
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+function win(user, comp) {
+    userScore++;
+    userScoreSpan.innerText = userScore;
+    message.innerText = `You chose ${user}, Computer chose ${comp}. You Win! 🎉`;
 }
 
-.score-board {
-    border: 3px solid white;
-    border-radius: 10px;
-    width: 250px;
-    margin: 20px auto;
-    padding: 15px 20px;
-    text-align: center;
-    font-size: 1.5rem;
-    position: relative;
+function lose(user, comp) {
+    compScore++;
+    compScoreSpan.innerText = compScore;
+    message.innerText = `You chose ${user}, Computer chose ${comp}. You Lose! 😢`;
 }
 
-.badge {
-    background: #e2584d;
-    color: white;
-    font-size: 1rem;
-    padding: 2px 10px;
-    position: absolute;
-    top: -10px;
-    border-radius: 5px;
-}
-
-#user-label { left: -20px; }
-#comp-label { right: -20px; }
-
-.result {
-    font-size: 2rem;
-    margin: 30px 0;
-    text-align: center;
-}
-
-.choices {
-    display: flex;
-    gap: 20px;
-}
-
-.choice {
-    background-color: white;
-    border: 4px solid white;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.choice:hover {
-    background-color: #34495e;
-    border-color: #95a5a6;
-}
-
-.choice span {
-    font-size: 3rem;
-    pointer-events: none;
+function draw(user, comp) {
+    message.innerText = `You chose ${user}, Computer chose ${comp}. It's a Tie! 😐`;
 }
